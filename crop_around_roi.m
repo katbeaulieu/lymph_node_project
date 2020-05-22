@@ -91,7 +91,7 @@ for i = 1:size(seg_files,1)
         
         headerInfo = nhdr_nrrd_write("C:\Users\kb48\Downloads/LymphNodeProject\Segmentations\cropped_" + seg_files(i).name, headerInfo, 1);
         %writing binary mask to file for use with pyradiomics
-        headerInfo_mask = nhdr_nrrd_write("C:\Users\kb48\Downloads/LymphNodeProject\Segmentations\cropped_mask_" + seg_files(i).name, headerInfo_mask, 1);
+        %headerInfo_mask = nhdr_nrrd_write("C:\Users\kb48\Downloads/LymphNodeProject\Segmentations\cropped_mask_" + seg_files(i).name, headerInfo_mask, 1);
         
     else
         dummy_img = zeros(60*60*12,1);
