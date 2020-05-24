@@ -144,7 +144,7 @@ def main():
     binary_labels = []
     for patient in os.listdir(nrrdDir):
         
-        if patient.startswith("zscore"):
+        if patient.startswith("zscore") and "single" not in patient:
             image = sitk.ReadImage(nrrdDir + patient)
             
             image = sitk.GetArrayFromImage(image)
@@ -165,7 +165,7 @@ def main():
     true_images = []
     false_images = []
     for i in range(len(binary_labels)):
-        if binary_labels[i] == 1:
+        if binary_labels[i] == 0:
             true_images.append(lymph_node_imgs[i])
         else:
             false_images.append(lymph_node_imgs[i])
