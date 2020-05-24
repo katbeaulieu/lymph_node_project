@@ -165,7 +165,7 @@ def main():
     true_images = []
     false_images = []
     for i in range(len(binary_labels)):
-        if binary_labels[i] == 0:
+        if binary_labels[i] == 1:
             true_images.append(lymph_node_imgs[i])
         else:
             false_images.append(lymph_node_imgs[i])
